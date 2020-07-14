@@ -1,0 +1,307 @@
+body{
+  margin:0;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  color: #40514E;
+  background-color: #99d8d0;
+}
+h1{
+  margin: 50px auto 0 auto;
+  font-family: 'Sacramento', cursive;
+  font-size: 4.625rem;
+  color: #66BFBF;
+  font-weight: 400;
+  animation: typing 5s steps(16);
+  overflow: hidden;
+  white-space: nowrap;
+  /* border-right: 4px solid ;
+  width: 7ch; */
+}
+
+@keyframes typing {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 16ch;
+  }
+}
+
+
+.top{
+  background-color: #363636;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 1px;
+}
+
+.mountain{
+  margin-bottom: 20px;
+}
+
+h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.0rem;
+  color: #66BFBF;
+  font-weight: normal;
+}
+h3{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: #11999E;
+}
+.middle{
+  margin:100px 100px;
+  background-color: #fff;
+
+}
+.bottom{
+  background-color: #ffbcbc;
+  padding: 50px 0 20px;
+}
+.skill-row{
+  width:50%;
+  margin:50px auto 100px auto;
+  text-align: left;
+
+}
+.web{
+  text-decoration: underline;
+}
+
+/* .top-cloud{
+  position: absolute;
+  right:300px;
+  top:50px;
+  animation: tcloud 5s steps(16);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@keyframes tcloud {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 16ch;
+  }
+}
+
+
+.bottom-cloud{
+  position: absolute;
+  left:300px;
+  bottom:300px;
+  animation: bcloud 5s steps(16);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@keyframes bcloud {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 16ch;
+  }
+} */
+
+
+
+
+
+/*Time to finalise the cloud shape*/
+.cloud {
+	width: 200px; height: 60px;
+	background: #fff;
+
+	border-radius: 100px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+
+	position: relative;
+}
+
+.cloud:before, .cloud:after {
+	content: '';
+	position: absolute;
+	background: #fff;
+	width: 100px; height: 80px;
+	position: absolute; top: -15px; left: 10px;
+
+	border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+	width: 120px; height: 120px;
+	top: -55px; left: auto; right: 15px;
+}
+
+/*Time to animate*/
+.x1 {
+	-webkit-animation: moveclouds 15s linear infinite;
+	-moz-animation: moveclouds 15s linear infinite;
+	-o-animation: moveclouds 15s linear infinite;
+}
+
+/*variable speed, opacity, and position of clouds for realistic effect*/
+.x2 {
+	left: 200px;
+
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+	opacity: 0.6; /*opacity proportional to the size*/
+
+	/*Speed will also be proportional to the size and opacity*/
+	/*More the speed. Less the time in 's' = seconds*/
+	-webkit-animation: moveclouds 25s linear infinite;
+	-moz-animation: moveclouds 25s linear infinite;
+	-o-animation: moveclouds 25s linear infinite;
+}
+
+.x3 {
+	left: -250px; top: -200px;
+
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8; /*opacity proportional to the size*/
+
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+
+.x4 {
+	left: 470px; top: -250px;
+
+	-webkit-transform: scale(0.75);
+	-moz-transform: scale(0.75);
+	transform: scale(0.75);
+	opacity: 0.75; /*opacity proportional to the size*/
+
+	-webkit-animation: moveclouds 18s linear infinite;
+	-moz-animation: moveclouds 18s linear infinite;
+	-o-animation: moveclouds 18s linear infinite;
+}
+
+.x5 {
+	left: -150px; top: -150px;
+
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8; /*opacity proportional to the size*/
+
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+
+@-webkit-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-moz-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-o-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+
+
+
+
+
+
+
+
+a{
+  color: #11999E;
+  margin: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #2c003e;
+}
+
+hr{
+  border:dotted #ffacb7 5px;
+  border-bottom: none;
+  width: 5%;
+  margin: 100px auto;
+}
+.heading{
+  color: #66BFBF;
+  font-size: 1.5rem;
+}
+.creative{
+  width:20%;
+  float:left;
+  margin-right: 30px;
+}
+
+.gear{
+  width:20%;
+  float:right;
+  margin-left: 30px;
+}
+
+.intro{
+  width:30%;
+  margin: auto;
+}
+
+
+
+p{
+  line-height: 2;
+}
+
+.reach{
+  line-height: 2;
+  margin-bottom: 100px;
+}
+
+.copyright{
+  color: #f7f7f7;
+  font-size: 1rem;
+  padding:20px 0px;
+}
+
+.btn {
+
+  font-family: 'Montserrat', sans-serif;
+  color: #14396A !important;
+  font-size: 14px;
+  text-shadow: 1px 1px 0px #7CACDE;
+  box-shadow: 1px 1px 1px #6964F9;
+  padding: 13px 27px;
+  -moz-border-radius: 27px;
+  -webkit-border-radius: 27px;
+  border-radius: 27px;
+  background: #EE77D6;
+  background: linear-gradient(top,  #468CCF,  #63B8EE);
+  background: -ms-linear-gradient(top,  #468CCF,  #63B8EE);
+  background: -webkit-gradient(linear, left top, left bottom, from(#468CCF), to(#63B8EE));
+  background: -moz-linear-gradient(top,  #468CCF,  #63B8EE);
+}
+.btn:hover {
+  color: #14396A !important;
+  background: #468CCF;
+  background: linear-gradient(top,  #CFA6C8,  #EE79B0);
+  background: -ms-linear-gradient(top,  #CFA6C8,  #EE79B0);
+  background: -webkit-gradient(linear, left top, left bottom, from(#CFA6C8), to(#EE79B0));
+  background: -moz-linear-gradient(top,  #CFA6C8,  #EE79B0);
+}
